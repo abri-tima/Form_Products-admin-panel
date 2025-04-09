@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма для відправки | ABRIKOS</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="shortcut icon" href="./Favicons/Logo-no-word.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="name-restaurant">
+        <div class="login-name">
+        <label for="rest-name" class="rest-name-label">Введіть логін користувача:</label>
+        <div class="rest-name-input-container">
+        <input type="text" class="rest-name-input" name="rest-name" minlength="3" id="rest-name">
+        </div>
+        </div>
+        <button type="button" id="login-button" class="button-login-form">Увійти</button>
+    </div>
+
+    <div id="start-message" class="start-message">
+       <span class="message-span">🔐 Щоб розпочати:</span>
+       Натисніть кнопку <strong>«Увійти»</strong> та введіть логін користувача, який вам надав менеджер.
+      </div>
+
+
+
+    <div id="form-container"  class="hidden form-container">
+        <div class="input-group">
+            <div class="label-input">
+            <label for="name" class="label-text">Прізвище, Імʼя</label>
+            <div class="label-input-human">
+            <input type="text" placeholder="" class="input-name-human" name="name" id="name" minlength="3">
+            </div>
+            </div>
+            <div class="label-input">
+                <label for="gender" class="label-text">Стать</label>
+            <select name="gender" id="gender" class="select-info">
+                <option value=""></option>
+                <option value="Чол">Чол</option>
+                <option value="Жін">Жін</option>
+            </select>
+            </div>
+            <!-- <button onclick="removeField(this)" class="button-all">Видалити</button> -->
+        </div>
+        <div class="window-info">
+            <div class="window-container-info">
+            <div class="label-products-list">
+            <label for="product" class="label-text">Виріб</label>
+            <select name="product" id="product-list" class="product-list">
+                <option value=""></option>
+                <option value="Кітель">Кітель</option>
+                <option value="Брюки">Брюки</option>
+                <option value="Фартук">Фартук</option>
+                <option value="Головний убір">Головний убір</option>
+                <option value="Поло, Футболки">Поло, Футболки</option>
+                <option value="Взуття">Взуття</option>
+                <option value="Світшот">Світшот</option>
+                <option value="Шкарпетки">Шкарпетки</option>
+            </select>
+            </div>
+            <div class="label-products-list">
+                <label for="product-arcticle" class="label-text">Назва виробу</label>
+                <select name="product-arcticle" id="product-list-article" class="product-list-article">
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="label-products-list">
+                <label for="product-color" class="label-text">Колір</label>
+                <select name="product-color" id="product-list-color" class="product-list" style="padding: 7px 20px 7px 12px; background-position-x: 98%;">
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="label-input">
+                <label for="quality-items" class="label-text">Кількість виробів</label>
+                <input type="tel" placeholder="" class="product-list-article" id="quality-items" name="quality-items" minlength="1" style=" width: 105px; height: 18px; background: none; background-color: #fff;">
+            </div>
+        </div>
+        <div class="window-container-no-wrap">
+            <div class="window-container-info">
+                <div class="label-input">
+                    <label for="product-size" class="label-text">Розмір вироба, якщо точно його знаєте</label>
+                    <select name="product-size" id="product-list-size" class="input-quality-product" style="padding: 7px 130px; background-position-x: 97%;">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="label-input">
+                    <label for="chest-size" class="label-text">Якщо розмір не знаєте, обхват грудей/стегон, см</label>
+                    <input type="tel" placeholder="Якщо у продукта немає ОГ/ОС, ставте '0' " class="input-quality-product" name="chest-size" id="chest-size" style="padding: 7px 80px; background: none; background-color: #fff;">
+                </div>
+                <div class="label-input">
+                    <label for="quality-logo" class="label-text">Кількість вишивок логотипу на виробі</label>
+                    <input type="tel" placeholder="Якщо у продукта немає вишивки, ставте '0' " class="input-quality-product" name="quality-logo" id="quality-logo" style="padding: 7px 80px; background: none; background-color: #fff;">
+                </div>
+                <div class="label-input">
+                    <label for="quality-embroideries" class="label-text">Кількість вишивки імені на виробі</label>
+                    <input type="tel" placeholder="Якщо у продукта немає вишивки, ставте '0' " class="input-quality-product" name="quality-embroideries" id="quality-embroideries" style="padding: 7px 80px; background: none; background-color: #fff;">
+                </div>
+            </div>
+        </div>
+        <div class="button-save">
+    <button onclick="handleSave()" class="button-save-form">Зберегти</button>
+    <button class="button-cancel-form" id="cancel-button">Отмена</button>
+    </div>
+    </div>
+    </div>
+    <div class="buttons-container btn-container-fixed">
+    <button id="addHumanButton" class="button-add-human">Додати людину</button>
+    <!-- <button type="submit" class="button-send-form">Відправити</button> -->
+     </div>
+
+     <div id="custom-message" class="custom-message">
+        <span class="message-span">🧑‍🍳 Готово! </span>
+        <span class="message-span">Ваші форми збережено й вони чекатимуть на вас під час наступного входу. <br /></span>
+        <span class="message-span">⏳ Дані зберігаються протягом 30 днів, після чого автоматично видаляються. <br /></span>
+        <span class="message-span">📦 При повторному вході вся інформація з’явиться тут автоматично. <br /></span>
+      </div>
+      <div id="custom-message-error" class="custom-message">
+        🤔 Упс! Такого логіна немає в списку. Перевірте, чи не переплутав хтось логін із соусом 😅
+      </div>
+      <div id="custom-message-fields" class="custom-message" style="transform: translate(-50%, 200%);">
+        <span>🤖 Ой! Хтось щось забув</span>
+        Заповніть усі поля форми, будь ласка 📝
+      </div>
+      <div id="loading-screen" class="loading-screen hidden-for-loading">
+        <div class="logo-loader">
+            <svg id="animated-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.79 76.29" width="200" height="200">
+                <circle id="circle" class="cls-1" cx="41.57" cy="26.69" r="26.69"/>
+                <rect id="rect1" class="cls-1" x="37.22" y="52.96" width="8.35" height="23.33"/>
+                <rect id="rect2" class="cls-1" x="1" y="67.36" width="80" height="8.92" rx="4.46" ry="4.46"/>
+              </svg>
+        </div>
+        <p>Завантаження...</p>
+      </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
